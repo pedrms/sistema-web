@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ateliê Souza</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="/img/img-alternativa.jpeg" alt="Imagem do Ateliê Souza" width="150" height="150">
-        <h1>Ateliê Souza</h1>
-        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <div class="logo-container">
+            <img src="https://placehold.co/150x150" alt="Logo do Ateliê Souza com fundo dourado" width="150" height="150" />
+            <h1>Ateliê Souza</h1>
+        </div>
+
+        <button id="toggleButton" class="botao-modo">Modo Escuro</button>
+        <div id="menu-toggle" class="menu-toggle">☰</div>
+
         <nav>
             <a href="#sobre">Ateliê</a>
             <div>
@@ -29,7 +34,7 @@
     </header>
 
     <main>
-        <section>
+        <section id="sobre">
             <h2>Ateliê</h2>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facere molestias ratione doloribus, nam obcaecati ipsum provident sit quae architecto voluptate nisi, sequi amet libero molestiae cum officiis eos dolorem.</p>
@@ -38,50 +43,50 @@
             </div>
         </section>
 
-        <section>
+        <section id="produtos">
             <h2>Destaques</h2>
-            <div>
+            <div class="produtos-grid">
                 <article>
-                    <img src="../img/logo-icon.ico" alt="Produto 1" width="290" height="330">
-                    <h3>PRODUTO 1</h3>
-                    <p>Valor</p>
+                    <img src="https://placehold.co/290x330" alt="Bolo de chocolate decorado com morangos e ganache" width="290" height="330">
+                    <h3>Bolo de Chocolate</h3>
+                    <p>R$ 120,00</p>
                 </article>
                 <article>
-                    <img src="../img/logo-icon.ico" alt="Produto 2" width="290" height="330">
-                    <h3>PRODUTO 2</h3>
-                    <p>Valor</p>
+                    <img src="https://placehold.co/290x330" alt="Docinho de brigadeiro gourmet com granulado colorido" width="290" height="330">
+                    <h3>Brigadeiro Gourmet</h3>
+                    <p>R$ 5,00/un</p>
                 </article>
                 <article>
-                    <img src="../img/logo-icon.ico" alt="Produto 3" width="290" height="330">
-                    <h3>PRODUTO 3</h3>
-                    <p>Valor</p>
+                    <img src="https://placehold.co/290x330" alt="Salgadinho de camarão empanado crocante" width="290" height="330">
+                    <h3>Camarão Empanado</h3>
+                    <p>R$ 45,00/porção</p>
                 </article>
             </div>
         </section>
 
-        <section>
+        <section id="categorias">
             <h2>Produtos</h2>
-            <div>
-                <a href="bolos.html">
-                    <img src="/img/BOLO15CM.jpg" alt="Bolo decorado" width="230" height="350">
+            <div class="produtos-grid">
+                <a href="#bolos">
+                    <img src="https://placehold.co/290x350" alt="Bolo decorado com flores de chantilly em tons pastel" width="290" height="350">
                     <h3>Bolos</h3>
                 </a>
-                <a href="doces.html">
-                    <img src="/img/bridageiros&beijinhos.jpg" alt="Doces" width="230" height="350">
+                <a href="#doces">
+                    <img src="https://placehold.co/290x350" alt="Caixa de docinhos finos com brigadeiros e beijinhos" width="290" height="350">
                     <h3>Doces</h3>
                 </a>
-                <a href="salgados.html">
-                    <img src="/img/camaraoempanado.jpg" alt="Camarão empanado" width="230" height="350">
+                <a href="#salgados">
+                    <img src="https://placehold.co/290x350" alt="Cesto de salgados variados para festa" width="290" height="350">
                     <h3>Salgados</h3>
                 </a>
-                <a href="kits.html">
-                    <img src="/img/kits.jpg" alt="Salgados variados" width="230" height="350">
+                <a href="#kits">
+                    <img src="https://placehold.co/290x350" alt="Kit festa completo com doces, salgados e decoração" width="290" height="350">
                     <h3>Kits</h3>
                 </a>
             </div>
         </section>
 
-        <section>
+        <section id="contato">
             <h2>+Infos</h2>
             <h3>Política de Encomendas</h3>
             <div>
@@ -102,19 +107,17 @@
                 <h3>Formas de Pagamento e Retirada</h3>
                 <h4>Formas de pagamento:</h4>
                 <ul>
-                    <li>Formas de Pagamento: Aceitamos cartão de crédito, débito, PIX e dinheiro.
-                    </li>
+                    <li>Aceitamos cartão de crédito, débito, PIX e dinheiro.</li>
                 </ul>
                 <h4>Endereço para Retirada</h4>
                 <ul>
                     <li>Rua General Mascarenhas de Moraes, Pau Miúdo, Salvador - BA, CEP 40310015.</li>
-                    <li>Não realizamos entregas no momento. A retirada dos pedidos é feita no local ou com
-                    entrega a combinar.</li>
+                    <li>Não realizamos entregas no momento. A retirada dos pedidos é feita no local ou com entrega a combinar.</li>
                 </ul>
             </div>
         </section>
 
-        <section>
+        <section id="feedback">
             <h2>Feedback</h2>
             <div>
                 <p>Espaço para feedback dos clientes.</p>
@@ -124,22 +127,23 @@
 
     <footer>
         <div>
-            <img src="/img/img-alternativa.jpeg" alt="Logo do Ateliê Souza" width="85" height="80">
+            <img src="https://placehold.co/85x80" alt="Logo reduzido do Ateliê Souza" width="85" height="80" />
         </div>
-        <div>
+        <div class="social-icons">
             <a href="#" target="_blank">
-                <img src="../img/whatsapp.png" alt="WhatsApp" width="25" height="25">
+                <img src="https://placehold.co/25x25" alt="Ícone do WhatsApp" width="25" height="25" />
             </a>
             <a href="#" target="_blank">
-                <img src="../img/email.png" alt="Email" width="25" height="25">
+                <img src="https://placehold.co/25x25" alt="Ícone de e-mail" width="25" height="25" />
             </a>
             <a href="#" target="_blank">
-                <img src="../img/instagram.png" alt="Instagram" width="25" height="25">
+                <img src="https://placehold.co/25x25" alt="Ícone do Instagram" width="25" height="25" />
             </a>
         </div>
         <div>
             <p>&copy; 2025 by Ateliê Souza. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

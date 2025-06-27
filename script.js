@@ -1,27 +1,46 @@
-const botao = document.getElementById("toggleButton");
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Script carregado e rodando");
 
-function aplicarModo(modoEscuroAtivo) {
-    if (modoEscuroAtivo) {
-        document.body.classList.add("modo-escuro");
-        botao.textContent = "Modo Claro";
-    } else {
-        document.body.classList.remove("modo-escuro");
-        botao.textContent = "Modo Escuro"; 
+    const botao = document.getElementById("toggleButton");
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+
+    function aplicarModo(modoEscuroAtivo) {
+        if (modoEscuroAtivo) {
+            document.body.classList.add("modo-escuro");
+            botao.textContent = "Modo Claro";
+        } else {
+            document.body.classList.remove("modo-escuro");
+            botao.textContent = "Modo Escuro";
+        }
     }
-}
 
-const modoSalvo = localStorage.getItem("modo") === "escuro";
-aplicarModo(modoSalvo);
+    const modoSalvo = localStorage.getItem("modo") === "escuro";
+    aplicarModo(modoSalvo);
 
-botao.addEventListener("click", () => {
-    const modoAtualEscuro = document.body.classList.toggle("modo-escuro");
-    localStorage.setItem("modo", modoAtualEscuro ? "escuro" : "claro");
-    aplicarModo(modoAtualEscuro);
-});
+    botao.addEventListener("click", () => {
+        const modoAtualEscuro = document.body.classList.toggle("modo-escuro");
+        localStorage.setItem("modo", modoAtualEscuro ? "escuro" : "claro");
+        aplicarModo(modoAtualEscuro);
+    });
 
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav");
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("ativo");
+    });
 
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("ativo");
+    // Melhorando a acessibilidade do menu dropdown
+    const produtosLink = document.querySelector("nav div > a[href='#produtos']");
+    const produtosMenu = document.querySelector("nav div ul");
+
+    produtosLink.addEventListener("focus", () => {
+        produtosMenu.style.display = "block";
+    });
+
+    produtosLink.addEventListener("blur", () => {
+        setTimeout(() => {
+            if (!produtosMenu.matches(":hover") && !produtosLink.matches(":hover")) {
+                produtosMenu.style.display = "none";
+            }
+        }, 100);
+    });
 });
