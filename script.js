@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.toggle("ativo");
     });
 
-    // Melhorando a acessibilidade do menu dropdown
     const produtosLink = document.querySelector("nav div > a[href='#produtos']");
     const produtosMenu = document.querySelector("nav div ul");
 
