@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Script carregado e rodando");
 
     const botao = document.getElementById("toggleButton");
     const toggle = document.getElementById("menu-toggle");
