@@ -1,128 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ateliê Souza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ateliê Souza - Doces</title>
 </head>
 <body>
-<script src="script.js"></script>
     <header>
-
-        <img src="/img/img-alternativa.jpeg" alt="" width="150px" height="150px">
-    <h1>Ateliê Souza</h1>
-        <nav>
-            <a href="index.html">Ateliê</a>
-            <div>
-                    <a href="index.html">Produtos</a>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-icon.ico" alt="Logo Ateliê Souza" width="100" height="100">
+                <h1>Ateliê Souza</h1>
+            </a>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="bolos.html">Bolos</a></li>
-                    <li><a href="doces.html">Doces</a></li>
-                    <li><a href="salgados.html">Salgados</a></li>
-                    <li><a href="kits.html">Kits</a></li>
+                    <li><a href="index.html#sobre">Ateliê</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="index.html#delivery">Delivery</a></li>
+                    <li><a href="index.html#feedback">Feedback</a></li> <button id="dark-mode-toggle" aria-label="Alternar modo escuro">
+                        <i class="fas fa-moon"></i>
+                        </button>
                 </ul>
-            </div>
-        </nav>
-            <a href="#contato">Contato</a> 
-            <a href="#delivery">Delivery</a>
-            <a href="#feedback">Feedback</a>
-        <nav>
+            </nav>
+        </div>
+        <div class="page-title">
             <h2>DOCES</h2>
-        </nav>
+        </div>
     </header>
 
-<main>
-    <!--As imagens repetidas são de exemplo, enquanto não tem as outras -->
-    <section> 
-        <div>
-            <h3>DOCES SIMPLES</h3>
-            <h4>R$ 1,60</h4>
-            <ul>
-               
-                <li><img src="/img/bridageiros&beijinhos.jpg" alt="" width="200px" height="300px">    Beijinho</li>
-               
-                <li> <img src="/img/bridageiros&beijinhos.jpg" alt="" width="200px" height="300px">Brigadeiro</li>
-                
-                <li><img src="/img/bridageiros&beijinhos.jpg" alt="" width="200px" height="300px">Cajuzinho</li>
-                
-                <li><img src="/img/bridageiros&beijinhos.jpg" alt="" width="200px" height="300px">Casadinho</li>
-                
-                <li><img src="/img/bridageiros&beijinhos.jpg" alt="" width="200px" height="300px">Moranguinho</li>
-            </ul>
-        </div>
-        
-        <div>
-            <h3>TRUFAS</h3>
-            <h4>R$ 2,30</h4>
-            <ul>
-               
-                <li> <img src="/img/docesvariados.jpg" alt="" width="200px" height="300px">Brigadeiro</li>
-                
-                <li><img src="/img/docesvariados.jpg" alt="" width="200px" height="300px">Coco</li>
-                
-                <li><img src="/img/doceamendoim.jpg" alt=""width="200px" height="300px">Paçoca</li>
-                
-                <li><img src="/img/docesvariados.jpg" alt="" width="200px" height="300px">Churros</li>
-               
-                <li> <img src="/img/docesvariados.jpg" alt="" width="200px" height="300px">Oreo</li>
-                
-                <li><img src="/img/docesvariados.jpg" alt="" width="200px" height="300px">Moranguinho</li>
-               
-                <li> <img src="/img/docesvariados.jpg" alt="" width="200px" height="300px">Maracujá</li>
-            </ul>
-        </div>
-    </section>
+    <main>
+        <section class="produto-categoria-list">
+            <div class="produto-item-group">
+                <h3>DOCES SIMPLES</h3>
+                <h4>R$ 1,60</h4>
+                <ul>
+                    <li><img src="img/bridageiros&beijinhos.jpg" alt="Beijinho"> Beijinho</li>
+                    <li><img src="img/bridageiros&beijinhos.jpg" alt="Brigadeiro"> Brigadeiro</li>
+                    <li><img src="img/bridageiros&beijinhos.jpg" alt="Cajuzinho"> Cajuzinho</li>
+                    <li><img src="img/bridageiros&beijinhos.jpg" alt="Casadinho"> Casadinho</li>
+                    <li><img src="img/bridageiros&beijinhos.jpg" alt="Moranguinho"> Moranguinho</li>
+                </ul>
+            </div>
 
-    <section>
-        <div>
-            <h3>DOCES PREMIUM</h3>
-            <ul>
-                
-                <li><img src="/img/bolonopotechoco1.jpg" alt="" width="200px" height="300px">Surpresa de Uva
-                R$ 2,70</li>
-                
-                <li><img src="/img/bolonopotechoco2.jpg" alt="" width="200px" height="300px">Brigadeiro Ferreiro
-                R$ 2,50</li>
-                
-                <li><img src="/img/bolonopotechoco1.jpg" alt="" width="200px" height="300px">Olho de Sogra
-                R$ 2,40</li>
-            </ul>
-        </div>
+            <div class="produto-item-group">
+                <h3>TRUFAS</h3>
+                <h4>R$ 2,30</h4>
+                <ul>
+                    <li><img src="img/docesvariados.jpg" alt="Trufa Brigadeiro"> Brigadeiro</li>
+                    <li><img src="img/docesvariados.jpg" alt="Trufa Coco"> Coco</li>
+                    <li><img src="img/docesvariados.jpg" alt="Trufa Paçoca"> Paçoca</li>
+                    <li><img src="img/docesvariados.jpg" alt="Trufa Churros"> Churros</li>
+                    <li><img src="img/docesvariados.jpg" alt="Trufa Oreo"> Oreo</li>
+                    <li><img src="img/docesvariados.jpg" alt="Trufa Moranguinho"> Moranguinho</li>
+                    <li><img src="img/docesvariados.jpg" alt="Trufa Maracujá"> Maracujá</li>
+                </ul>
+            </div>
 
-        <div>
-            <h3>DOCES ESPECIAIS </h3>
-            <h4>R$ 1,80</h4>
-            <ul>
+            <div class="produto-item-group">
+                <h3>DOCES PREMIUM</h3>
+                <ul>
+                    <li><img src="img/bolonopotechoco1.jpg" alt="Surpresa de Uva"> Surpresa de Uva <span>R$ 2,70</span></li>
+                    <li><img src="img/bolonopotechoco2.jpg" alt="Brigadeiro Ferreiro"> Brigadeiro Ferreiro <span>R$ 2,50</span></li>
+                    <li><img src="img/bolonopotechoco1.jpg" alt="Olho de Sogra"> Olho de Sogra <span>R$ 2,40</span></li>
+                </ul>
+            </div>
 
-                <li><img src="/img/doceamendoim.jpg" alt="" width="200px" height="300px">Churros</li>
-                
-                <li><img src="/img/doceamendoim.jpg" alt="" width="200px" height="300px">Oreo</li>
-                
-                <li><img src="/img/doceamendoim.jpg" alt="" width="200px" height="300px">Formatos Florais</li>
-            </ul>
-        </div>
-    </section>
+            <div class="produto-item-group">
+                <h3>DOCES ESPECIAIS</h3>
+                <h4>R$ 1,80</h4>
+                <ul>
+                    <li><img src="img/doceamendoim.jpg" alt="Doce Churros"> Churros</li>
+                    <li><img src="img/doceamendoim.jpg" alt="Doce Oreo"> Oreo</li>
+                    <li><img src="img/doceamendoim.jpg" alt="Doces Formatos Florais"> Formatos Florais</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-</main>
+    <footer>
+        <div class="footer-content" id="contato">
+            <img src="img/logo-icon.ico" alt="Logo do Ateliê Souza" width="85" height="80">
 
-         <footer>
-        <div> 
-            <a href="" target="_blank">
-                <img src="../img/whatsapp.png" alt="WhatsApp" width="25px" height="25px">
-            </a>
-            <a href="" target="_blank">
-                <img src="../img/email.png" alt="Email" width="25px" height="25px">
-            </a>
-            <a href="" target="_blank">
-                <img src="../img/instagram.png" alt="Instagram" width="25px" height="25px">
-            </a>
-        </div>
-
-        <div>
-            <p>&copy; 2025 by Ateliê Souza. Todos os seus direitos reservados.</p> <!--opacity: 0.7; aqui tbm CSS -->
+            <div class="social-links">
+                <a href="https://wa.me/71988212474" target="_blank" aria-label="WhatsApp">
+                    <img src="/img/whatsapp.png" alt="whatsapp">
+                </a>
+                <a href="https://www.instagram.com/lusouza_cake/" target="_blank" aria-label="Instagram">
+                 <img src="/img/instagram.png" alt="instagram">
+                </a>
+            </div>
+            <p>&copy; 2025 by Ateliê Souza. Todos os direitos reservados.</p>
         </div>
     </footer>
-</body>
+    <script src="script.js"></script>
 
+</body>
 </html>

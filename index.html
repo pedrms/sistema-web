@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ateliê Souza</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ateliê Souza</title>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="https://placehold.co/150x150" alt="Logo do Ateliê Souza com fundo dourado" width="150" height="150" />
-            <h1>Ateliê Souza</h1>
-        </div>
-
-        <button id="toggleButton" class="botao-modo">Modo Escuro</button>
-        <div id="menu-toggle" class="menu-toggle">☰</div>
-
-        <nav>
-            <a href="#sobre">Ateliê</a>
-            <div>
-                <a href="#produtos">Produtos</a>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-icon.ico" alt="Imagem do Ateliê Souza" width="100" height="100">
+                <h1>Ateliê Souza</h1>
+            </a>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="#bolos">Bolos</a></li>
-                    <li><a href="#doces">Doces</a></li>
-                    <li><a href="#salgados">Salgados</a></li>
-                    <li><a href="#kits">Kits</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <button id="dark-mode-toggle" aria-label="Alternar modo escuro">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </ul>
-            </div>
-            <a href="#contato">Contato</a>
-            <a href="#delivery">Delivery</a>
-            <a href="#feedback">Feedback</a>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -38,149 +33,144 @@
             <h2>Ateliê</h2>
             <div class="text-content">
                 <p>O Ateliê Souza é mais do que uma simples confeitaria, somos um refúgio de sabores, um espaço onde a arte da culinária se encontra com a paixão por criar momentos inesquecíveis. Nossa história começou na cozinha de casa, com receitas de família passadas de geração em geração, aprimoradas com carinho e dedicação, transformando cada bolo, doce e salgado em uma pequena obra prima.</p>
-                <p>Nossa confeitaria é o resultado de um amor profundo pela gastronomia e um compromisso com a satisfação de cada cliente. Convidamos você a fazer parte da nossa história, a experimentar a magia dos nossos sabores e a transformar seus eventos em celebrações memoráveis. Seja para um <strong>aniversário</strong>, uma <stroing>reunião familiar</strong> ou simplesmente para <strong>adoçar o dia</strong>, estamos aqui para criar experiências gustativas que ficarão gravadas na memória.</p>
+                <p>Nossa confeitaria é o resultado de um amor profundo pela gastronomia e um compromisso com a satisfação de cada cliente. Convidamos você a fazer parte da nossa história, a experimentar a magia dos nossos sabores e a transformar seus eventos em celebrações memoráveis. Seja para um <strong>aniversário</strong>, uma <stroing>reunião familiar</stroing> ou simplesmente para <strong>adoçar o dia</strong>, estamos aqui para criar experiências gustativas que ficarão gravadas na memória.</p>
                 <p class="paladar">Venha nos conhecer e deixe o Ateliê Souza encantar seu paladar!</p>
             </div>
         </section>
 
-        <section id="produtos">
+        <section id="destaques" class="produtos-destaque">
             <h2>Destaques</h2>
-            <div class="produtos-grid">
-                <article>
-                    <img src="https://placehold.co/290x330" alt="Bolo de chocolate decorado com morangos e ganache" width="290" height="330">
-                    <h3>Bolo de Chocolate</h3>
-                    <p>R$ 120,00</p>
-                </article>
-                <article>
-                    <img src="https://placehold.co/290x330" alt="Docinho de brigadeiro gourmet com granulado colorido" width="290" height="330">
-                    <h3>Brigadeiro Gourmet</h3>
-                    <p>R$ 5,00/un</p>
-                </article>
-                <article>
-                    <img src="https://placehold.co/290x330" alt="Salgadinho de camarão empanado crocante" width="290" height="330">
-                    <h3>Camarão Empanado</h3>
-                    <p>R$ 45,00/porção</p>
-                </article>
+            <div class="produto-grid">
+                <section id="produto-card">
+                    <img src="/img/bridageiros&beijinhos.jpg" alt="Produto 1">
+                    <h3>BOLOS</h3>
+                </section>
+                <section id="produto-card">
+                    <img src="/img/BOLO25CM.jpg" alt="Produto 2">
+                    <h3>KITS</h3>
+                </section>
+                <section id="produto-card">
+                    <img src="/img/salgadoquiche.jpg" alt="Produto 3">
+                    <h3>SALGADOS</h3>
+                </section>
             </div>
         </section>
 
-        <section id="categorias">
-            <h2>Produtos</h2>
-            <div class="produtos-grid">
-                <a href="#bolos">
-                    <img src="https://placehold.co/290x350" alt="" width="290" height="350">
+        <section id="produtos" class="produto-categories">
+            <h2>Nossos Produtos</h2>
+            <div class="categoria-grid">
+                <a href="bolos.html" class="categoria-card">
+                    <img src="img/BOLO15CM.jpg" alt="Bolo decorado">
                     <h3>Bolos</h3>
                 </a>
-                <a href="#doces">
-                    <img src="https://placehold.co/290x350" alt="" width="290" height="350">
+                <a href="doces.html" class="categoria-card">
+                    <img src="img/bridageiros&beijinhos.jpg" alt="Doces">
                     <h3>Doces</h3>
                 </a>
-                <a href="#salgados">
-                    <img src="https://placehold.co/290x350" alt="" width="290" height="350">
+                <a href="salgados.html" class="categoria-card">
+                    <img src="img/camaraoempanado.jpg" alt="Camarão empanado">
                     <h3>Salgados</h3>
                 </a>
-                <a href="#kits">
-                    <img src="https://placehold.co/290x350" alt="" width="290" height="350">
+                <a href="kits.html" class="categoria-card">
+                    <img src="img/kits.jpg" alt="Salgados variados">
                     <h3>Kits</h3>
                 </a>
             </div>
         </section>
 
-        <section id="contato">
-  <h2>+Infos</h2>
+        <section id="mais-infos" class="info-section">
+            <h2>+Infos</h2>
 
-  <button class="accordion">Prazo para Pedidos</button>
-  <div class="panel">
-    <p>Aceitamos encomendas com, no mínimo, 3 dias de antecedência, para garantir a qualidade e o atendimento adequado.</p>
-  </div>
+            <button class="accordion">Prazo para Pedidos</button>
+            <div class="panel">
+                <p>Aceitamos encomendas com, no mínimo, 3 dias de antecedência, para garantir a qualidade e o atendimento adequado.</p>
+            </div>
 
-  <button class="accordion">Horário de Funcionamento</button>
-  <div class="panel">
-    <p>Nosso horário de funcionamento é das 10h às 18h, de segunda a sexta-feira, e aos sábados, domingos e feriados, até as 12h.</p>
-  </div>
+            <button class="accordion">Horário de Funcionamento</button>
+            <div class="panel">
+                <p>Nosso horário de funcionamento é das 10h às 18h, de segunda a sexta-feira, e aos sábados, domingos e feriados, até as 12h.</p>
+            </div>
 
-  <button class="accordion">Condições de Pagamento</button>
-  <div class="panel">
-    <p>Para confirmar sua encomenda, é necessário realizar o pagamento de 50% do valor no ato do pedido. Os outros 50% deverão ser pagos na entrega do pedido.</p>
-  </div>
+            <button class="accordion">Condições de Pagamento</button>
+            <div class="panel">
+                <p>Para confirmar sua encomenda, é necessário realizar o pagamento de 50% do valor no ato do pedido. Os outros 50% deverão ser pagos na entrega do pedido.</p>
+            </div>
 
-  <button class="accordion">Alterações e Cancelamentos</button>
-  <div class="panel">
-    <ul>
-      <li>Alterações podem ser feitas até 24 horas após a confirmação do pedido, desde que a produção não tenha iniciado.</li>
-      <li>Cancelamentos devem ser solicitados com, no mínimo, 48 horas de antecedência. Caso o pedido seja cancelado após esse prazo ou esteja em produção, não haverá reembolso do valor já pago.</li>
-    </ul>
-  </div>
+            <button class="accordion">Alterações e Cancelamentos</button>
+            <div class="panel">
+                <ul>
+                    <li>Alterações podem ser feitas até 24 horas após a confirmação do pedido, desde que a produção não tenha iniciado.</li>
+                    <li>Cancelamentos devem ser solicitados com, no mínimo, 48 horas de antecedência. Caso o pedido seja cancelado após esse prazo ou esteja em produção, não haverá reembolso do valor já pago.</li>
+                </ul>
+            </div>
 
-  <button class="accordion">Formas de Pagamento</button>
-  <div class="panel">
-    <ul>
-      <li>Aceitamos cartão de crédito, débito, PIX e dinheiro.</li>
-    </ul>
-  </div>
+            <button class="accordion">Formas de Pagamento</button>
+            <div class="panel">
+                <ul>
+                    <li>Aceitamos cartão de crédito, débito, PIX e dinheiro.</li>
+                </ul>
+            </div>
 
-  <button class="accordion">Endereço para Retirada</button>
-  <div class="panel">
-    <ul>
-      <li>Rua General Mascarenhas de Moraes, Pau Miúdo, Salvador - BA, CEP 40310015.</li>
-      <li>Não realizamos entregas no momento. A retirada dos pedidos é feita no local ou com entrega a combinar.</li>
-    </ul>
-  </div>
-</section>
-<section>
-  <div>
-    <form action="" method="post">
-      <fieldset>
-        <legend>Feedback</legend>
+            <button class="accordion">Endereço para Retirada</button>
+            <div class="panel">
+                <ul>
+                    <li>Rua General Mascarenhas de Moraes, Pau Miúdo, Salvador - BA, CEP 40310015.</li>
+                    <li>Não realizamos entregas no momento. A retirada dos pedidos é feita no local ou com entrega a combinar.</li>
+                </ul>
+            </div>
+        </section>
 
-        <label for="nome">Nome:</label> <br>
-        <input type="text" id="nome" name="nome" required>
-        <br>
+        <section id="feedback" class="feedback-section">
+            <h2>Feedback</h2>
+            <div class="text-feedback">
+                <p>Espaço para feedback dos clientes.</p>
+                <div>
+                    <form action="salvar.php" method="post">
+                        <label>Nome:</label><br>
+                        <input type="text" name="nome" required><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email">
+                        <label>Email:</label><br>
+                        <input type="email" name="email" required><br><br>
 
-        <p>Grau de satisfação:</p>
-        <input type="radio" id="msatisfeito" name="satisfacao">
-        <label for="msatisfeito">Muito satisfeito</label>
+                        <label>Telefone:</label><br>
+                        <input type="text" name="telefone" required><br><br>
 
-        <input type="radio" id="satisfeito" name="satisfacao">
-        <label for="satisfeito">Satisfeito</label>
+                        <div class="satisfacao">
+                            <p>Grau de satisfação:</p>
+                            <input type="radio" id="msatisfeito" name="satisfacao">
+                            <label for="satisfacao">Muito satisfeito</label>
+                            <input type="radio" id="satisfeito" name="satisfacao">
+                            <label for="satisfacao">Satisfeito</label>
+                            <input type="radio" id="insatisfeito" name="satisfacao">
+                            <label for="satisfacao">Insatisfeito</label>
+                        </div>
 
-        <input type="radio" id="insatisfeito" name="satisfacao">
-        <label for="insatisfeito">Insatisfeito</label>
+                        <br>
+                        <label>Mensagem:</label><br>
+                        <textarea placeholder="(Opcional)" name="mensagem" rows="5" cols="40" required></textarea><br><br>
 
-        <input type="radio" id="minsatisfeito" name="satisfacao">
-        <label for="minsatisfeito">Muito Insatisfeito</label>
-        <br>
-
-        <label for="descricao">Descrição:</label> <br>
-        <textarea placeholder="(Opcional)" name="descricao" rows="5" cols="40"></textarea>
-      </fieldset>
-    </form>
-  </div>
-</section>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div>
-            <img src="https://placehold.co/85x80" alt="Logo reduzido do Ateliê Souza" width="85" height="80" />
-        </div>
-        <div class="social-icons">
-            <a href="#" target="_blank">
-                <img src="assets/img/icones/whatsapp.png" alt="Ícone do WhatsApp"  width="25" height="25"/>
-            </a>
-            <a href="#" target="_blank">
-                <img src="assets/img/icones/email.png" alt="Ícone de e-mail" width="25" height="25" />
-            </a>
-            <a href="#" target="_blank">
-                <img src="assets/img/icones/instagram.png" alt="Ícone do Instagram" width="25" height="25" />
-            </a>
-        </div>
-        <div>
+    <footer id="contato">
+        <div class="footer-content">
+            <img src="img/logo-icon.ico" alt="Logo do Ateliê Souza" width="85" height="80">
+            <div class="social-links">
+                <a href="https://wa.me/71988212474" target="_blank">
+                    <img src="img/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/lusouza_cake/" target="_blank">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+            </div>
             <p>&copy; 2025 by Ateliê Souza. Todos os direitos reservados.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

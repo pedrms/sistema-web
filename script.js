@@ -1,53 +1,76 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', function() {
+    const loaderOverlay = document.getElementById('loader-overlay');
+    setTimeout(() => {
+        loaderOverlay.classList.add('hidden');
+    }, 500); 
 
-    const botao = document.getElementById("toggleButton");
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.querySelector("nav");
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
 
-    function aplicarModo(modoEscuroAtivo) {
-        if (modoEscuroAtivo) {
-            document.body.classList.add("modo-escuro");
-            botao.textContent = "Modo Claro";
+    
+    function applyTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>'; 
         } else {
-            document.body.classList.remove("modo-escuro");
-            botao.textContent = "Modo Escuro";
+            body.classList.remove('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>'; 
         }
     }
 
-    const modoSalvo = localStorage.getItem("modo") === "escuro";
-    aplicarModo(modoSalvo);
+    applyTheme();
 
-    botao.addEventListener("click", () => {
-        const modoAtualEscuro = document.body.classList.toggle("modo-escuro");
-        localStorage.setItem("modo", modoAtualEscuro ? "escuro" : "claro");
-        aplicarModo(modoAtualEscuro);
+    darkModeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode'); 
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            localStorage.setItem('theme', 'light'); 
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
     });
 
-    toggle.addEventListener("click", () => {
-        nav.classList.toggle("ativo");
-    });
+    document.querySelectorAll('nav.nav-links a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); 
 
-    const produtosLink = document.querySelector("nav div > a[href='#produtos']");
-    const produtosMenu = document.querySelector("nav div ul");
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const headerOffset = document.querySelector('#header').offsetHeight; 
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerOffset - 20; 
 
-    produtosLink.addEventListener("focus", () => {
-        produtosMenu.style.display = "block";
-    });
-
-    produtosLink.addEventListener("blur", () => {
-        setTimeout(() => {
-            if (!produtosMenu.matches(":hover") && !produtosLink.matches(":hover")) {
-                produtosMenu.style.display = "none";
-            }
-        }, 100);
-    });
-});
-
-const acc = document.querySelectorAll(".accordion");
-    acc.forEach(btn => {
-        btn.addEventListener("click", function () {
-            this.classList.toggle("active");
-            const panel = this.nextElementSibling;
-            panel.style.display = panel.style.display === "block" ? "none" : "block";
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth" 
+            });
         });
     });
+
+    const sections = document.querySelectorAll('section');
+
+    const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.2 
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        section.style.opacity = 0; 
+        section.style.transform = 'translateY(50px)'; 
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(section);
+    });
+});

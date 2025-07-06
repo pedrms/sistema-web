@@ -1,126 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ateliê Souza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ateliê Souza - Salgados</title>
 </head>
 <body>
-<script src="script.js"></script>
     <header>
-        
-        <img src="/img/img-alternativa.jpeg" alt="" width="150px" height="150px">
-    <h1>Ateliê Souza</h1>
-        <nav>
-            <a href="index.html">Ateliê</a>
-            <div>
-                    <a href="index.html">Produtos</a>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-icon.ico" alt="Logo Ateliê Souza" width="100" height="100">
+                <h1>Ateliê Souza</h1>
+            </a>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="bolos.html">Bolos</a></li>
-                    <li><a href="doces.html">Doces</a></li>
-                    <li><a href="salgados.html">Salgados</a></li>
-                    <li><a href="kits.html">Kits</a></li>
+                    <li><a href="index.html#sobre">Ateliê</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="index.html#delivery">Delivery</a></li>
+                    <li><a href="index.html#feedback">Feedback</a></li> <button id="dark-mode-toggle" aria-label="Alternar modo escuro">
+                        <i class="fas fa-moon"></i>
+                        </button>
                 </ul>
-            </div>
-        </nav>
-            <a href="#contato">Contato</a> 
-            <a href="#delivery">Delivery</a>
-            <a href="#feedback">Feedback</a>
-        <nav>
+            </nav>
+        </div>
+        <div class="page-title">
             <h2>SALGADOS</h2>
-        </nav>
+        </div>
     </header>
 
-<main>
-    
-    <section>
-      <div>
-        <img src="/img/salgadoquiche.jpg" alt="" width="230px" height="350px">
-        <h3>SALGADOS ASSADOS</h3>
-        <h4>R$ 2,50</h4>
-        <ul>
-            <li>Empada de Frango</li>
-            <li>Saltenha</li>
-            <li>Quiche (Calabresa e Queijo)</li>
-            <li>Mini Pizza   R$ 3,00</li>
-            <li>Empada Doce</li>
-        </ul>
-      </div>
- 
-        <div>
-            <img src="/img/camaraoempanado.jpg" alt="" width="230px" height="350px">
-            <h3>SALGADOS PREMIUM</h3>
-            <h4>R$ 2,50</h4>
-            <ul>
-                <li>Camarão Empanado</li>
-                <li>Carne Seca com Queijo</li>
-                <li>Bolinho de Bacalhau</li>
-            </ul>
-        </div>
+    <main>
+        <section class="produto-categoria-list">
+            <div class="produto-item-group">
+                <img src="img/salgadoquiche.jpg" alt="Salgados Assados">
+                <h3>SALGADOS ASSADOS</h3>
+                <h4>R$ 2,50</h4>
+                <ul>
+                    <li>Empada de Frango</li>
+                    <li>Saltenha</li>
+                    <li>Quiche (Calabresa e Queijo)</li>
+                    <li>Mini Pizza <span>R$ 3,00</span></li>
+                    <li>Empada Doce</li>
+                </ul>
+            </div>
 
-        <div>
-            <img src="/img/coxinha.jpg" alt="" width="230px" height="350px">
-            <h3>SALGADOS FRITOS</h3>
-            <h4>R$1,20</h4>
-            <ul>
-                <li>Bolinha de Queijo</li>
-                <li>Misto (Queijo e Presunto)</li>
-                <li>Coxinha</li>
-                <li>Calabresa com Queijo</li>
-                <li>Mini Churros</li>
-                <li>Bolinho de Carne</li>
-                <li>Croquete de Bacalhau</li>
-            </ul>  
-              <h4>R$ 1,40</h4>
-            <ul>
-                <li>Quibe Recheado</li>
-                <li>Boliviano</li>
-            </ul>
-        </div>
+            <div class="produto-item-group">
+                <img src="img/camaraoempanado.jpg" alt="Salgados Premium">
+                <h3>SALGADOS PREMIUM</h3>
+                <h4>R$ 2,50</h4>
+                <ul>
+                    <li>Camarão Empanado</li>
+                    <li>Carne Seca com Queijo</li>
+                    <li>Bolinho de Bacalhau</li>
+                </ul>
+            </div>
 
-        <div>
-            <img src="/img/barquete_tropical.jpg" alt="" width="230px" height="350px">
-            <h3>SALGADOS ESPECIAIS</h3>
-            <h4>R$ 2,70</h4>
-            <ul>
-                <li>Empada de Camarão</li>
-                <li>Empada Bacalhau</li>
-                <li>Barquete Tropical</li>
-                <li>Barquete Bacalhau</li>
-            </ul> 
+            <div class="produto-item-group">
+                <img src="img/coxinha.jpg" alt="Salgados Fritos">
+                <h3>SALGADOS FRITOS</h3>
+                <h4>R$1,20</h4>
+                <ul>
+                    <li>Bolinha de Queijo</li>
+                    <li>Misto (Queijo e Presunto)</li>
+                    <li>Coxinha</li>
+                    <li>Calabresa com Queijo</li>
+                    <li>Mini Churros</li>
+                    <li>Bolinho de Carne</li>
+                    <li>Croquete de Bacalhau</li>
+                </ul>
+                <h4>R$ 1,40</h4>
+                <ul>
+                    <li>Quibe Recheado</li>
+                    <li>Boliviano</li>
+                </ul>
+            </div>
 
-            <h4>R$ 2,50</h4>
-            <ul>
-                <li>Pão Delícia - Creme de Peito de Peru</li>
-            </ul>  
-
-             <h4>R$ 2,30</h4>
-            <ul>
-                <li>Pão Delícia - Creme de Queijo</li>
-            </ul>
-        </div>
-    </section>
-
-</main>
+            <div class="produto-item-group">
+                <img src="img/barquete_tropical.jpg" alt="Salgados Especiais">
+                <h3>SALGADOS ESPECIAIS</h3>
+                <h4>R$ 2,70</h4>
+                <ul>
+                    <li>Empada de Camarão</li>
+                    <li>Empada Bacalhau</li>
+                    <li>Barquete Tropical</li>
+                    <li>Barquete Bacalhau</li>
+                </ul>
+                <h4>R$ 2,50</h4>
+                <ul>
+                    <li>Pão Delícia - Creme de Peito de Peru</li>
+                </ul>
+                <h4>R$ 2,30</h4>
+                <ul>
+                    <li>Pão Delícia - Creme de Queijo</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div> 
-            <a href="" target="_blank">
-                <img src="../img/whatsapp.png" alt="WhatsApp" width="25px" height="25px">
-            </a>
-            <a href="" target="_blank">
-                <img src="../img/email.png" alt="Email" width="25px" height="25px">
-            </a>
-            <a href="" target="_blank">
-                <img src="../img/instagram.png" alt="Instagram" width="25px" height="25px">
-            </a>
-        </div>
+        <div class="footer-content" id="contato">
+            <img src="img/logo-icon.ico" alt="Logo do Ateliê Souza" width="85" height="80">
 
-        <div>
-            <p>&copy; 2025 by Ateliê Souza. Todos os seus direitos reservados.</p> <!--opacity: 0.7; aqui tbm CSS -->
+            <div class="social-links">
+                <a href="https://wa.me/71988212474" target="_blank" aria-label="WhatsApp">
+                    <img src="/img/whatsapp.png" alt="whatsapp">
+                </a>
+                <a href="https://www.instagram.com/lusouza_cake/" target="_blank" aria-label="Instagram">
+                 <img src="/img/instagram.png" alt="instagram">
+                </a>
+            </div>
+            <p>&copy; 2025 by Ateliê Souza. Todos os direitos reservados.</p>
         </div>
     </footer>
-</body>
+    <script src="script.js"></script>
 
+</body>
 </html>

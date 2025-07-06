@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Adicione o caminho correto para sua folha de estilo -->
-    <title>Ateliê Souza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ateliê Souza - Kits</title>
 </head>
 <body>
-<script src="script.js"></script>
     <header>
-        <img src="/img/img-alternativa.jpeg" alt="Imagem do Ateliê Souza" width="150" height="150">
-        <h1>Ateliê Souza</h1>
-        <nav>
-            <a href="index.html">Ateliê</a>
-            <div>
-                <a href="index.html">Produtos</a>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo-icon.ico" alt="Logo Ateliê Souza" width="100" height="100">
+                <h1>Ateliê Souza</h1>
+            </a>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="bolos.html">Bolos</a></li>
-                    <li><a href="doces.html">Doces</a></li>
-                    <li><a href="salgados.html">Salgados</a></li>
-                    <li><a href="kits.html">Kits</a></li>
+                    <li><a href="index.html#sobre">Ateliê</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="index.html#delivery">Delivery</a></li>
+                    <li><a href="index.html#feedback">Feedback</a></li> <button id="dark-mode-toggle" aria-label="Alternar modo escuro">
+                        <i class="fas fa-moon"></i>
+                        </button>
                 </ul>
-            </div>
-            <a href="#contato">Contato</a> 
-            <a href="#delivery">Delivery</a>
-            <a href="#feedback">Feedback</a>
-        </nav>
-        <h2>KITS</h2>
+            </nav>
+        </div>
+        <div class="page-title">
+            <h2>KITS</h2>
+        </div>
     </header>
 
-    <main>       
-        <section>
-            <div>
-                <h3>Básico</h3> 
+    <main>
+        <section class="kits-list">
+            <div class="kit-card">
+                <h3>Básico</h3>
                 <p>Serve até 15 pessoas</p>
                 <h4>Bolo de 15cm</h4>
                 <ul>
@@ -51,10 +52,10 @@
                 <ul>
                     <li>Empadas</li>
                 </ul>
-                <h5>R$265</h5>
+                <h5 class="price">R$265</h5>
             </div>
 
-            <div>
+            <div class="kit-card">
                 <h3>Médio</h3>
                 <p>Serve até 20 pessoas.</p>
                 <h4>Bolo 20cm</h4>
@@ -75,10 +76,10 @@
                 <ul>
                     <li>Empadas</li>
                 </ul>
-                <h5>R$375</h5>
+                <h5 class="price">R$375</h5>
             </div>
 
-            <div>
+            <div class="kit-card">
                 <h3>Grande</h3>
                 <p>Serve até 30 pessoas.</p>
                 <h4>Bolo 25cm</h4>
@@ -99,26 +100,26 @@
                 <ul>
                     <li>Empadas</li>
                 </ul>
-                <h5>R$535</h5>
+                <h5 class="price">R$535</h5>
             </div>
         </section>
-    </main> 
+    </main>
 
     <footer>
-        <div> 
-            <a href="" target="_blank">
-                <img src="../img/whatsapp.png" alt="WhatsApp" width="25" height="25">
-            </a>
-            <a href="" target="_blank">
-                <img src="../img/email.png" alt="Email" width="25" height="25">
-            </a>
-            <a href="" target="_blank">
-                <img src="../img/instagram.png" alt="Instagram" width="25" height="25">
-            </a>
-        </div>
-        <div>
+        <div class="footer-content" id="contato">
+            <img src="img/logo-icon.ico" alt="Logo do Ateliê Souza" width="85" height="80">
+
+            <div class="social-links">
+                <a href="https://wa.me/71988212474" target="_blank" aria-label="WhatsApp">
+                    <img src="/img/whatsapp.png" alt="whatsapp">
+                </a>
+                <a href="https://www.instagram.com/lusouza_cake/" target="_blank" aria-label="Instagram">
+                 <img src="/img/instagram.png" alt="instagram">
+                </a>
+            </div>
             <p>&copy; 2025 by Ateliê Souza. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
