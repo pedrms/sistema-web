@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Ateliê Souza</title>
 </head>
 <body>
@@ -17,9 +17,10 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
                     <li><a href="#info">Informações</a></li>
                     <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contato">Contato</a></li>
                     <li>
                         <button id="dark-mode-toggle" aria-label="Alternar modo escuro">
                             <i class="fas fa-moon"></i>
@@ -67,24 +68,40 @@
 
             <button class="accordion">Prazo para Pedidos</button>
             <div class="panel">
-                <p>Aceitamos encomendas com, no mínimo, 3 dias de antecedência, para garantir a qualidade e o atendimento adequado.</p>
+                <ul>
+                    <li>
+                        <p>Aceitamos encomendas com, no mínimo, 3 dias de antecedência, para garantir a qualidade e o atendimento adequado.</p>
+                    </li>
+                </ul>
             </div>
 
             <button class="accordion">Horário de Funcionamento</button>
             <div class="panel">
-                <p>Nosso horário de funcionamento é das 10h às 18h, de segunda a sexta-feira, e aos sábados, domingos e feriados, até as 12h.</p>
+                <ul>
+                    <li>
+                        <p>Nosso horário de funcionamento é das 10h às 18h, de segunda a sexta-feira, e aos sábados, domingos e feriados, até as 12h.</p>
+                    </li>
+                </ul>
             </div>
 
             <button class="accordion">Condições de Pagamento</button>
             <div class="panel">
-                <p>Para confirmar sua encomenda, é necessário realizar o pagamento de 50% do valor no ato do pedido. Os outros 50% deverão ser pagos na entrega do pedido.</p>
+                <ul>
+                    <li>
+                        <p>Para confirmar sua encomenda, é necessário realizar o pagamento de 50% do valor no ato do pedido. Os outros 50% deverão ser pagos na entrega do pedido.</p>
+                    </li>
+                </ul>
             </div>
 
             <button class="accordion">Alterações e Cancelamentos</button>
             <div class="panel">
                 <ul>
-                    <li>Alterações podem ser feitas até 24 horas após a confirmação do pedido, desde que a produção não tenha iniciado.</li>
-                    <li>Cancelamentos devem ser solicitados com, no mínimo, 48 horas de antecedência. Caso o pedido seja cancelado após esse prazo ou esteja em produção, não haverá reembolso do valor já pago.</li>
+                    <li>
+                        Alterações podem ser feitas até 24 horas após a confirmação do pedido, desde que a produção não tenha iniciado.
+                    </li>
+                    <li>
+                        Cancelamentos devem ser solicitados com, no mínimo, 48 horas de antecedência. Caso o pedido seja cancelado após esse prazo ou esteja em produção, não haverá reembolso do valor já pago.
+                    </li>
                 </ul>
             </div>
 
@@ -98,46 +115,53 @@
             <button class="accordion">Endereço para Retirada</button>
             <div class="panel">
                 <ul>
-                    <li>Rua General Mascarenhas de Moraes, Pau Miúdo, Salvador - BA, CEP 40310015.</li>
-                    <li>Não realizamos entregas no momento. A retirada dos pedidos é feita no local ou com entrega a combinar.</li>
+                    <li>
+                        Rua General Mascarenhas de Moraes, Pau Miúdo, Salvador - BA, CEP 40310015.
+                    </li>
+                    <li>
+                        Não realizamos entregas no momento. A retirada dos pedidos é feita no local ou com entrega a combinar.
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section id="feedback" class="feedback-section">
-            <h2>Feedback</h2>
-            <div class="text-feedback">
-                <p>Espaço para feedback dos clientes.</p>
-                <div>
-                    <form action="salvar.php" method="post">
-                        <label>Nome:</label><br>
-                        <input type="text" name="nome" required><br><br>
+<section id="feedback" class="feedback-section">
+    <h2>Feedback</h2>
+    <div class="text-feedback">
+        <p>Espaço para feedback dos clientes.</p>
+        <div>
+            <form action="https://api.sheetmonkey.io/form/qmgYPZkb93NDnmJBgz2QYL" method="post">
+                <label>Nome:</label>
+                <input type="text" name="Name" required>
 
-                        <label>Email:</label><br>
-                        <input type="email" name="email" required><br><br>
+                <label>Email:</label>
+                <input type="email" name="Email" required>
 
-                        <label>Telefone:</label><br>
-                        <input type="text" name="telefone" required><br><br>
+                <label>Telefone:</label>
+                <input type="text" name="Telefone" required>
 
-                        <div class="satisfacao">
-                            <p>Grau de satisfação:</p>
-                            <input type="radio" id="msatisfeito" name="satisfacao">
-                            <label for="satisfacao">Muito satisfeito</label>
-                            <input type="radio" id="satisfeito" name="satisfacao">
-                            <label for="satisfacao">Satisfeito</label>
-                            <input type="radio" id="insatisfeito" name="satisfacao">
-                            <label for="satisfacao">Insatisfeito</label>
-                        </div>
+                <div class="satisfacao">
+                    <p>Grau de satisfação:</p>
+                    <input type="radio" id="msatisfeito" name="Satisfacao" value="Muito satisfeito">
+                    <label for="msatisfeito">Muito satisfeito</label>
 
-                        <br>
-                        <label>Mensagem:</label><br>
-                        <textarea placeholder="(Opcional)" name="mensagem" rows="5" cols="40" required></textarea><br><br>
+                    <input type="radio" id="satisfeito" name="Satisfacao" value="Satisfeito">
+                    <label for="satisfeito">Satisfeito</label>
 
-                        <button type="submit">Enviar</button>
-                    </form>
+                    <input type="radio" id="insatisfeito" name="Satisfacao" value="Insatisfeito">
+                    <label for="insatisfeito">Insatisfeito</label>
                 </div>
-            </div>
-        </section>
+
+                <label>Mensagem:</label>
+                <textarea placeholder="(Opcional)" name="Mensagem" rows="5" cols="40"></textarea>
+
+                <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer id="contato">
