@@ -16,7 +16,7 @@ body.dark-mode {
     --secondary-color: #b38b3d; /* Cor secundária ajustada */
     --accent-color: #c4b68e; /* Destaque mais suave */
     --text-dark: #fdfaf0; /* Texto claro para o modo escuro */
-    --text-light: #432918; /* Texto escuro para elementos de destaque */
+    --text-light: #ffeeb5; /* Texto escuro para elementos de destaque */
     --bg-light: #2c2c2c; /* Fundo principal escuro */
     --bg-white: #3a3a3a; /* Fundo de seções escuro */
     --border-color: #555;
@@ -60,8 +60,6 @@ body {
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
@@ -231,7 +229,6 @@ section {
 .produto-grid,
 .categoria-grid,
 .kits-list,
-.produto-categoria-list,
 .produto-list-bolos {
     display: grid;
     gap: 30px;
@@ -239,6 +236,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 20px 0;
 }
+
 
 .produto-grid img{
     width: 100%;
@@ -249,7 +247,7 @@ section {
 }
 
 .categoria-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .categoria-card {
@@ -421,15 +419,25 @@ body.dark-mode .feedback-section textarea {
 .produto-categoria-list, .produto-list-bolos {
     display: grid;
     gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
+    padding: 20px 0;
+}
+
+.produto-item-group, .bolo-card {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transição suave */
 }
 
 .produto-item-group, .bolo-card {
     background-color: var(--bg-white);
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 30px;
+    padding: 40px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -561,14 +569,15 @@ body.dark-mode .add-ons-section .important-info {
 }
 
 .kits-list {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .kit-card {
     background-color: var(--bg-white);
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 30px;
+    padding: 40px;
+    gap: 20px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -715,14 +724,6 @@ footer p {
     h2 {
         font-size: 1.8em;
         margin-bottom: 20px;
-    }
-
-    .produto-grid,
-    .categoria-grid,
-    .kits-list,
-    .produto-categoria-list,
-    .produto-list-bolos {
-        grid-template-columns: 1fr;
     }
 
     .feedback-section form {
